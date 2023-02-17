@@ -1,0 +1,7 @@
+.decorContainer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100vw;
+    display: grid;
+    position: relative;
+}

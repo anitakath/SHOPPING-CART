@@ -2,51 +2,54 @@
 
 const itemContainer = document.getElementById('itemContainer')
 const item = document.querySelectorAll('.item')
-
 const cartItems = document.getElementById('cartItems')
 
 
 
 let NecklacesData = [{
-    id: "necklace-hana",
+    id: "necklaceHana",
     name: "NECKLACE 'HANA'",
     price: "79,99",
-    desc: "a simple elegant necklace ",
+    desc: "a simple elegant necklace for ",
     img: "shoppingImages/necklaceI.jpg"
 }, {
-    id: "necklace-amelie",
+    id: "necklaceAmelie",
     name: "NECKLACE 'AMELIE'",
     price: "89,99",
-    desc: " a simple elegant necklace ",
+    desc: " a simple elegant necklace for ",
     img: "shoppingImages/necklaceIII.jpg"
 }, {
-    id: "necklace-cleo",
+    id: "necklaceCleo",
     name: "NECKLACE 'CLEO'",
     price: "79,99",
-    desc: " a simple elegant necklace ",
+    desc: " a simple elegant necklace for ",
     img: "shoppingImages/necklaceII.jpg"
 }, {
-    id: "necklace-freya",
+    id: "necklaceFreya",
     name: "NECKLACE 'FREYA'",
     price: "79,99",
-    desc: " a simple elegant necklace ",
+    desc: " a simple elegant necklace for",
     img: "shoppingImages/necklace10.jpg"
 
 }, {
-    id: "necklace-alisha",
+    id: "necklaceAlisha",
     name: "NECKLACE 'ALISHA'",
-    price: "79,99",
-    desc: " a simple elegant necklace ",
+    price: "99,99",
+    desc: " a simple elegant necklace for",
     img: "shoppingImages/necklace11.jpg"
 }, {
-    id: "necklace-louise",
+    id: "necklaceLouise",
     name: "NECKLACE 'LOUISE'",
-    price: "79,99",
-    desc: " a simple elegant necklace ",
+    price: "59,99",
+    desc: " a simple elegant necklace for",
     img: "shoppingImages/necklace12.jpg"
 }]
 
-let myBasket = []
+let myBasket = JSON.parse(localStorage.getItem("data")) || [];
+//JSON.parse, damit wir die im lokalen Speicher gespeicherten Daten 
+//beim Refreshen der Seite wieder aufrufen können
+
+console.log(NecklacesData)
 
 // loope durch die Items
 // füge einen eventlistener hinzu, der das Item einloggt, welches angeklickt wird
@@ -59,28 +62,44 @@ let createShop = () =>{
         /*let {id, name, price, desc, img} = x; ohne diese deklaration müssten wir ${x.img} usw schreiben...*/
 
         let { id, name, desc, img, price } = x;
+        let search = myBasket.find((x)=> x.id === id) || []
+        // search für jedes gespeicherte Element, 
+        // wenn Seite gerefresht wurde und die Anzahl der Elemente bei 0, local storage jedoch
+        // gespeicherte Elemente hat (wir wollen dass das Display immer die im local storage
+        // gespeicherten Daten direkt anzeigt)
+        // search kommt weiter unten als Ersatz für die Null
 
         return  ` 
-        <div id="productId${id}" class="item ring" value="ring">
+        <div id="productId${id}" class="item" data-aos="fade-up">
 
-           <h2 class="title">${name}</h2>
+
            <div class="itemImage">
               <img src="${img}" alt="" style="width: 250px">
-           </div>
-           
-           <div class="itemTitle">
-                <p class="stars">✨</p>
-                <p>${desc}</p>
-                <h3>${price}</h3>
-                
-           </div>
+            </div>
 
-           <div class="counter">
-             <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
-             <p class="quantity" id=${id}> 0 </p>
-             <i onclick="increment(${id})" class="bi bi-plus-lg"></i>
-                  
-           </div>
+            <div class="itemTitle">
+              <p class="itemTitleDesc">${name}</p>
+              <h3>${price}</h3>
+            </div>
+
+            <div class="addSection">
+              <div class="addToWishlist"> 
+                <i class="bi bi-balloon-heart"></i>
+              </div>
+
+
+              <div class="counter" >
+                <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
+                <p class="quantity" id=${id}> 
+                ${search.item === undefined? 0: search.item} </p>
+                <i onclick="increment(${id})" class="bi bi-plus-lg"></i>
+              </div>
+            </div>
+            
+
+            </div>
+
+           
 
         </div> `
     })
@@ -88,6 +107,174 @@ let createShop = () =>{
 }
 
 createShop(); 
+
+/*
+
+let addItemToCart = (id)=>{
+    //console.log('moincito')
+    let addItem = id;
+
+    //console.log(addItem)
+
+    myBasket.push({
+        id: addItem.id,
+        item: 1
+    })
+
+    console.log(myBasket)
+} 
+*/
+
+
+
+function addItemToCart(){
+    
+    let counter = document.querySelector('.counter')
+    let removeCartSymbol = document.querySelector('.removeCartSymbol')
+    console.log(counter)
+
+    counter.style.display = 'flex'
+    removeCartSymbol.style.display = 'none'
+}
+
+
+
+
+let increment = (id) => {
+    let selectedItem = id;
+    
+
+    //does the clicked element exist?
+    let search = myBasket.find((x) => x.id ===  selectedItem.id);
+
+    //if the element does not exist then add it to the shopping cart. 
+    // else if it already exists then increase the quantity of the element by 1
+
+    if (search === undefined){
+        myBasket.push({
+            id: selectedItem.id,
+            item: 1,
+        })
+    
+        console.log(myBasket)
+    } else{
+        search.item +=1;
+    }
+
+    localStorage.setItem("data", JSON.stringify(myBasket));
+    //console.log(myBasket);
+    update(selectedItem.id);
+  };
+
+
+
+let decrement = (id) => {
+  let selectedItem = id;
+
+  //does the clicked element exist?
+  let search = myBasket.find((x) => x.id ===  selectedItem.id);
+
+    //if the element does exist then remove it from the shopping cart. 
+    // else if it already exists then increase the quantity of the element by 1
+
+    if(search === undefined){
+        return //means do not do anything, just go ahead
+    } else if(search.item === 0){
+        return
+    } else{
+        search.item -=1;
+    }
+
+    localStorage.setItem("data", JSON.stringify(myBasket));
+
+    // console.log(myBasket)
+    update(selectedItem.id);
+  
+};
+
+
+let update = (id) => {
+    let search = myBasket.find((x)=> x.id === id);
+
+    console.log(search.item)
+
+    
+    document.getElementById(id).innerHTML = search.item;
+    calculation();
+
+}
+
+let calculation = () =>{
+    let basketIcon = document.getElementById('basketIcon')
+    basketIcon.innerHTML=myBasket.map((x) => x.item).reduce((x, y) => x + y, 0);
+    // 0 : we want the calculation to start from zero
+}
+
+calculation();
+
+
+
+
+/*
+let styleTheContainersChildren = ()=>{
+   let itemContainerChildren = itemContainer.children;
+  
+
+   for (let i = 0; i < itemContainerChildren.length; i++){
+
+       let childElement = itemContainerChildren[i];
+
+       childElement.addEventListener('click', ()=>{
+           childElement.style.border = '0.2px solid black'
+           
+       })
+   }
+}
+
+styleTheContainersChildren();
+*/
+
+const itemImage = document.querySelectorAll('.itemImage')
+console.log(itemImage)
+
+itemImage.forEach(image =>{
+    image.addEventListener('click', ()=>{
+
+        removeActive();
+
+        image.classList.add('active');
+    })
+})
+
+function removeActive(){
+    itemImage.forEach(image =>{
+        image.classList.remove('active');
+    })
+}
+
+
+let enlargeContainersChildren =()=>{
+    let itemContainerChildren = itemContainer.children;
+
+    for (let i = 0; i < itemContainerChildren.length; i++){
+        let childElement = itemContainerChildren[i];
+
+        childElement.addEventListener('click', ()=>{
+
+            const enlarged = document.querySelector('.enlarged')
+            if (!childElement.classList.contains(enlarged)){
+                childElement.classList.add(enlarged)
+            } else{
+                childElement.classList.remove(enlarged)
+            }
+        })
+    }
+
+}
+
+enlargeContainersChildren();
+
+
 /*
 const decrementRing = document.getElementById('decrementring')
 const incrementRing = document.getElementById('incrementring')
@@ -99,99 +286,3 @@ const decrementNecklace = document.getElementById('')
 
 /* WHY OCCURS AN ERROR WHEN USING INCREMENT() AND DECREMENT() WHEN ONCLICK="INCREMENT(${X.ID}" ON HTML I-TAG WITHIN CREATESHOP() ??? 
 SAYING VARIABLE RING/NECKLACE, BRACELET IS NOT DEFINED AT INDEX??? */
-let increment = (id) => {
-    let selectedItem = id;
-    console.log(selectedItem)
-    
-  };
-
-
-
-let decrement = (id) => {
-  let selectedItem = id;
-  console.log(selectedItem)
-
-  
-};
-
-
-
-
-
-
-
-
-
-/* 
-
-
-
-
-
-for(let i = 0; i < item.length; i++){
-    item[i].addEventListener('click', function (){
-    
-        console.log(item[i])
-        
-        // create a styled div for cart items
-        let createDiv = document.createElement('div')
-        createDiv.classList.add('itemDesign')
-        cartItems.appendChild(createDiv);
-        
-        // create a paragraph for created div
-        let createParagraph = document.createElement('p')
-        let itemTitle = createParagraph
-        createDiv.appendChild(itemTitle)
-
-        // value from  clicked item
-
-        let itemValue = item[i].getAttribute('value');
-        itemTitle.innerText = itemValue;
-
-
-        let addItemToBasket = function (item){
-            let addedItem = myBasket.push(item[i])
-            console.log (addedItem)
-        }
-
-        
-    })
-}
-
-
-
-
-
-
-
-const itemTitle = document.querySelectorAll('.itemTitle')
-
-
-for(let j = 0; j < item.length; j++){
-    item[j].addEventListener('mouseover', function(){
-        for (let k = 0; k < itemTitle.length; k++){
-            itemTitle[k].style.display = 'inline-block'
-            itemTitle[k].style.fontSize = '20px'
-            itemTitle[k].style.transition = '0.4s ease'
-            itemTitle[k].style.bottom = '80px'
-        }
-    })
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-// wenn Item angeklickt, display des inhalts im basket
-*/
