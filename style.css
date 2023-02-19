@@ -66,6 +66,47 @@ header{
    
 }
 
+
+nav{
+    
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigationContainer{
+    display: flex;
+    height: 3rem;
+    position: relative;
+    position: fixed;
+    top: 110px;
+    z-index: 1000;
+   
+}
+
+.aContainer{
+    margin: 5px;
+    width: 220px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigationItem{
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px 2rem;
+    scroll-behavior: smooth;
+    
+}
+
+.navigationItem a:hover{
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
 /*----*/
 
 .shopNameTitle{
@@ -154,11 +195,13 @@ header{
 
 main{
     padding: 20px;
-    margin: 20px;
+    margin: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+   
+    
     
 }
 
@@ -166,8 +209,23 @@ main{
     width: 100vw;
     display: grid;
     position: relative;
-    /*border: 10px solid green;*/
+    border: 10px solid green;
     grid-template-columns: repeat(4, 1fr);
+}
+
+.goUpContainer{
+    width: 50px;
+    position: fixed;
+    z-index: 1000;
+    top: 133px;
+    left: 12px;
+    font-size: 1.8rem;
+    display: flex;
+   
+}
+
+#goUp:hover{
+    text-shadow: 1px 1px 10px purple;
 }
 
 .item{   

@@ -1,7 +1,88 @@
-.decorContainer{
+.decorContainer, .carpetContainer, .lampsContainer{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     width: 100vw;
     display: grid;
     position: relative;
+
 }
+
+
+
+/*-------------------- HOME DECOR SUM -----------------_*/
+
+.decorItem{
+    margin: 20px;
+    height: 18rem;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.itemTitleContainer{
+    background-color: hsla(0, 0%, 50%, 0.3);
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    bottom: -4rem;
+}
+
+.itemTitleContainer h1 a:hover{
+    letter-spacing: 6px;
+    transition: 0.5s ease;
+}
+
+.livingroom{
+    background-image: url("shoppingImages/livingroom.jpg");
+}
+
+.kitchen{
+    background-image: url("shoppingImages/kitchen.jpg");
+}
+
+.bathroom{
+    background-image: url("shoppingImages/bathroom.jpg");
+}
+
+.bedroom{
+    background-image: url("shoppingImages/bedroom.jpg");
+}
+
+
+
+
+
+
+
+
+/*----------------HOME DECOR LIVING---------------------_*/
+
+
+.living{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.5px grey;
+    margin: -10px;
+}
+
+.sectionTitle{
+    width: 100vw;
+   height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    
+}
+/*
+#vases{
+    background-image: url('livingImages/vase0.jpg');
+    background-size: cover;
+    background-color: hsla(0, 0%, 100%, 0.1);
+}*/
+
