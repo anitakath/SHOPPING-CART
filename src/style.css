@@ -80,14 +80,15 @@ nav{
     position: fixed;
     top: 110px;
     z-index: 1000;
-   
+    top: 140px;
 }
 
 .aContainer{
     margin: 5px;
-    width: 220px;
+    width: 250px;
     display: flex;
     justify-content: center;
+
 }
 
 .navigationItem{
@@ -95,11 +96,12 @@ nav{
     display: inline-block;
     margin: 5px 2rem;
     scroll-behavior: smooth;
-    
+    letter-spacing: 5px;
+    text-shadow: 1px 1px 10px blanchedalmond;
 }
 
 .navigationItem a:hover{
-    letter-spacing: 1px;
+    letter-spacing: 6px;
     cursor: pointer;
     transition: 0.3s ease;
 }
