@@ -187,6 +187,7 @@ let removeItem=(id)=>{
   myBasket = myBasket.filter((x) => x.id !== selectedItem.id)
   generateCartItems(); 
   totalBill();
+  calculation();
   localStorage.setItem("data", JSON.stringify(myBasket));
   
   
