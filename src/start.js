@@ -1,3 +1,24 @@
+
+// --------------------------------------------------------------------------------------------- SHOPPING CART
+
+
+let myBasket = JSON.parse(localStorage.getItem("data")) || [] 
+
+
+let calculation = () =>{
+    let basketIcon = document.getElementById('basketIcon')
+    basketIcon.innerHTML=myBasket.map((x) => x.item).reduce((x, y) => x + y, 0);
+    // 0 : we want the calculation to start from zero
+}
+
+calculation();
+// 02:04 youtube
+
+
+
+// --------------------------------------------------------------------------------------------- SLIDER 
+
+
 const sliderContainer = document.getElementById('sliderContainer')
 const leftSlides = document.getElementById('leftSlides')
 const rightSlides = document.getElementById('rightSlides')

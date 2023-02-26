@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/style.css">
     <link rel="stylesheet" href="styleHomeDecor.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -29,19 +29,22 @@
             <div class="headerRightContainer">
                 <input type="search" placeholder="search..." class="search">
                 <a href="index.html"> <i class="bi bi-house"></i> </a>
-                <i class="bi bi-bag-heart" id="wishlistIcon"></i>
-                <div class="basketIconContainer">
-                    <i class="bi bi-bag-fill" class="basketIcon" id="basketIcon"> 1 </i>
-                </div>
+                <a href="wishlist.html"> <i class="bi bi-bag-heart" id="wishlistIcon"></i></a>
+                <a href="cart.html">
+                    <div class="basketIconContainer">
+                        <i class="bi bi-bag-fill" class="basketIcon" id="basketIcon"> 0 </i>
+                    </div>
+                </a>
             </div>
         </div>
+
     </header>
 
     <main>
         <div class="decorContainer">
             <div class="decorItem livingroom"> 
                 <div class="itemTitleContainer">
-                    <h1>  <a href="0HOMELIVING.html">LIVINGROOM</a> </h1>
+                    <h1>  <a href="0HOME.html">LIVINGROOM</a> </h1>
 
                 </div>
             </div>
@@ -66,66 +69,13 @@
         </div>
     </main>
 
-
-
-
-
-
-    <script src="main.js"></script>
+    <script src="src/main.js"></script>
+    <script src="src/homesum.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
-    <script>
-        const decorItem = document.querySelectorAll('.decorItem')
-        const itemTitleContainer = document.querySelectorAll('.itemTitleContainer')
-
-
-        /*
-        function displayTitle(){
-            for(let i = 0; i < itemTitleContainer.length; i++){
-                    itemTitleContainer[i].style.bottom = '200px'
-                    console.log(itemTitleContainer[i])
-                }
-        }
-
-        displayTitle();
-        */
-
-     
-
-        
-
-        decorItem.forEach((item)=>{
-            item.addEventListener('click', ()=>{
-                item.style.border = '1px solid gold'
-            
-               /*
-                
-                for(let i = 0; i < itemTitleContainer.length; i++){
-                    itemTitleContainer[i].style.bottom = '200px'
-                    console.log(itemTitleContainer[i])
-                }*/
-
-                console.log(item)
-
-                
-                itemTitleContainer.forEach((x) =>{
-                    x.style.bottom = '4rem'
-                    x.style.transition = '1s ease'
-                    x.style.letterSpacing = '4px'
-                })
-                /*
-                console.log(item)
-                console.log(item.itemTitleContainer)
-                console.log(itemTitleContainer)*/
-                
-            })
-        })
-
-
-
-    </script>
-    
+  
+  
 </body>
 </html>

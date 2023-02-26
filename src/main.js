@@ -1,3 +1,5 @@
+
+
 // hol alle Items an Land
 
 const itemContainer = document.getElementById('itemContainer')
@@ -5,13 +7,15 @@ const item = document.querySelectorAll('.item')
 const cartItems = document.getElementById('cartItems')
 
 
-
-
 let myBasket = JSON.parse(localStorage.getItem("data")) || [];
 //JSON.parse, damit wir die im lokalen Speicher gespeicherten Daten 
 //beim Refreshen der Seite wieder aufrufen können
 
-console.log(NecklacesData)
+
+let myWishlist = JSON.parse(localStorage.getItem("dataWishlist")) || [];
+
+
+
 
 // loope durch die Items
 // füge einen eventlistener hinzu, der das Item einloggt, welches angeklickt wird
@@ -19,8 +23,7 @@ console.log(NecklacesData)
 
 
 let createShop = () =>{
-    return (itemContainer.innerHTML = NecklacesData
-        .map((x) => {
+    return (itemContainer.innerHTML = necklacesData.map((x) => {
         /*let {id, name, price, desc, img} = x; ohne diese deklaration müssten wir ${x.img} usw schreiben...*/
 
         let { id, name, desc, img, price } = x;
@@ -46,7 +49,7 @@ let createShop = () =>{
 
             <div class="addSection">
               <div class="addToWishlist"> 
-                <i class="bi bi-balloon-heart"></i>
+                <i onclick="addToWishlist(${id})" class="bi bi-balloon-heart"></i>
               </div>
 
 
@@ -70,22 +73,6 @@ let createShop = () =>{
 
 createShop(); 
 
-/*
-
-let addItemToCart = (id)=>{
-    //console.log('moincito')
-    let addItem = id;
-
-    //console.log(addItem)
-
-    myBasket.push({
-        id: addItem.id,
-        item: 1
-    })
-
-    console.log(myBasket)
-} 
-*/
 
 
 
@@ -98,6 +85,47 @@ function addItemToCart(){
     counter.style.display = 'flex'
     removeCartSymbol.style.display = 'none'
 }
+
+
+let addToWishlist = (id) =>{
+
+    //access the selected items' id
+    let selectedItem = id;
+    //check, whether there is a conformity between the selected items' id 
+    //and the id of an already exciting item
+    let search = myWishlist.find((x) => x.id === selectedItem.id);
+
+    // add an element with the items' id to the array if search couldnt find an already existing item
+    if(search === undefined){
+        myWishlist.push({
+            id: selectedItem.id,
+            item: 1,
+        })
+
+        console.log(myWishlist)
+    } else{
+        search.item +=1;
+    }
+
+    updateWishlist(selectedItem.id);
+    localStorage.setItem("dataWishlist", JSON.stringify(myWishlist));
+}
+
+
+let calculationWishlist =()=>{
+    let wishlistIcon = document.getElementById('wishlistIcon')
+    wishlistIcon.innerHTML=myWishlist.map((x) => x.item).reduce((x, y) => x+y, 0);
+}
+
+calculationWishlist();
+
+let updateWishlist = (id) =>{
+    let search = myWishlist.find((x) => x.id === id);
+    document.getElementById(id).innerHTML = search.item;
+    calculationWishlist();
+}
+
+
 
 
 
@@ -126,7 +154,6 @@ let increment = (id) => {
     update(selectedItem.id);
     localStorage.setItem("data", JSON.stringify(myBasket));
   };
-
 
 
 let decrement = (id) => {
@@ -168,6 +195,7 @@ let update = (id) => {
 
 }
 
+
 let calculation = () =>{
     let basketIcon = document.getElementById('basketIcon')
     basketIcon.innerHTML=myBasket.map((x) => x.item).reduce((x, y) => x + y, 0);
@@ -199,7 +227,7 @@ styleTheContainersChildren();
 */
 
 const itemImage = document.querySelectorAll('.itemImage')
-console.log(itemImage)
+
 
 itemImage.forEach(image =>{
     image.addEventListener('click', ()=>{
