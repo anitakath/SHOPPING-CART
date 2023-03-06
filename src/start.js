@@ -28,7 +28,7 @@ const downBtn = document.getElementById('downBtn')
 
 const slidesLength = rightSlides.querySelectorAll('div').length
 const slidesHeight = sliderContainer.clientHeight
-console.log(slidesHeight)
+
 
 let activeSlideIndex = 0;
 
@@ -58,3 +58,83 @@ let changeSlides = (direction) =>{
     rightSlides.style.transition= '0.5s ease'
     leftSlides.style.transition= '0.5s ease'
 }
+
+
+
+
+/* GET MOBILE VERSION */
+
+const mobileMenuContainer = document.getElementById('mobileMenuContainer')
+const mobileNav = document.getElementById('webNav')
+const mobileMain = document.getElementById('mobileMain')
+
+mobileMenuContainer.addEventListener('click', ()=>{
+    mobileNav.style.transform = 'translateY(10px)'
+    mobileNav.style.transition = '1s ease-in'
+    mobileMain.style.opacity = '0.3'
+    mobileMain.style.transition = '1s ease-in'
+})
+
+/* GET MOBILE MAIN SLIDER */
+
+const mobileMainSlider = document.getElementById('mobileMainSlider')
+
+
+const mobileSlides = document.querySelectorAll('.mobileSlides')
+
+
+const sliderHeight = mobileMainSlider.offsetHeight;
+console.log(sliderHeight)
+const slidesHeightt = mobileMainSlider.clientHeight;
+console.log(slidesHeightt)
+
+
+
+let slider=0;
+
+setInterval(function(){
+    /*
+  let something = slider * sliderHeight;
+  console.log(something) */
+    slider++
+
+    if(slider === 0){
+        mobileMainSlider.style.transform = `translateY(0px)`
+
+    } else if(slider === 1){
+        mobileMainSlider.style.transform = `translateY(-${sliderHeight}px)`
+        mobileMainSlider.style.transition = '1s ease'
+       
+    } else if(slider === 2){
+        mobileMainSlider.style.transform = `translateY(-${slider * sliderHeight}px)`
+        mobileMainSlider.style.transition = '1s ease'
+
+    } else if(slider === 3){
+        mobileMainSlider.style.transform = `translateY(-${slider * sliderHeight}px)`
+        mobileMainSlider.style.transition = '1s ease'
+
+    } else if(slider === 4){
+        mobileMainSlider.style.transform = `translateY(-${slider * sliderHeight}px)`
+        mobileMainSlider.style.transition = '1s ease'
+
+    } else if(slider === 5){
+        mobileMainSlider.style.transform = `translateY(0px)`
+        mobileMainSlider.style.transition = '1s ease'
+
+    } else if(slider >= 5){
+        slider = 0;
+        mobileMainSlider.style.transform = `translateY(-${sliderHeight}px)`
+    }
+
+    
+
+  /*console.log(slider)*/
+}, 4000);
+
+
+
+
+/*
+mobileMainSlider.addEventListener('click', ()=>{
+    alert('moincito')
+})*/
