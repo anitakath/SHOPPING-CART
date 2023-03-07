@@ -132,6 +132,10 @@ nav{
    
 }
 
+.mobileNavLogin{
+    display: none;
+}
+
 
 
 
@@ -375,7 +379,7 @@ nav{
 
 
 
-
+/*
 
 footer{
     width: 100vw;
@@ -383,12 +387,15 @@ footer{
     border-bottom: 0.5px solid grey;
     display: flex;
     justify-content: center;
-    margin: 20px;
+    margin: 10px;
+  
 }
 
 .footer{
     width: 100vw;
-    /*border: 2px solid orange;*/
+   /* border: 2px solid orange;*/
+
+   /*
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -398,8 +405,10 @@ footer{
 
 .subscribeNewsletter{
     width: 100vw;
-    height: 150px;
+    height: 100px;
     /*border: 2px solid blue;*/
+
+    /*
     display: flex;
     justify-content: center;
     align-items: center;
@@ -415,20 +424,21 @@ footer{
     
 }
 
-.contacts{
+.footerContacts{
     display: flex;
     width: 100vw;
-    height: 300px;
-   /* border: 2px solid green;*/
+    height: 30vh;
+    border: 2px solid yellow;
 }
 
-.contacts ul{
+.footerContacts ul{
     width: 100%;
     position: relative;
+     border: 2px solid blue;
 }
 
-.contacts div{
-    /*border: 2px solid purple;*/
+.row{
+    border: 2px solid purple;
     width: 100%;
     margin: 10px;
     padding: 10px;
@@ -438,18 +448,18 @@ footer{
 }
 
 .one{
-    position: absolute;
+    
     top: 50px;
     left: 0;
 }
 
 .two{
-    position: absolute;
+    
     top: 150px;
     left: 0;
 }
 
-.contacts div li{
+.footerContacts div li{
     width: 100%;
     text-decoration: none;
     display: inline-block;
@@ -461,10 +471,10 @@ footer{
     letter-spacing: 2px;
 }
 
-.contacts div li:hover{
+.footerContacts div li:hover{
     transition: 0.5s ease;
     font-size: 1.2rem;
-}
+} */
 
 .mobileMain{
     display: none;
@@ -538,7 +548,7 @@ footer{
 
    .navLinkContainer{
        width: 100vw;
-       height: 50px;
+       height: 45px;
    }
 
 
@@ -553,6 +563,11 @@ footer{
 
 .webMain{
     display: none;
+}
+
+
+.mobileNavLogin{
+    display: flex;
 }
 
 .mobileMain{
@@ -639,6 +654,114 @@ footer{
         height: 350px;
     }
 
+
+    footer{
+        width: 100vw;
+        position: relative;
+        top: -65px;
+        border-top: 0.5px solid silver;
+    }
+
+    .footer{
+        width: 100vw;
+    }
+
+    .subscribeNewsletter{
+        
+        width: 100vw;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .subscribeNewsletter h1{
+        font-size: 1rem;
+        cursor: pointer;
+        position: relative;
+        left: -7px;
+    }
+    .subscribeNewsletter h1:hover{
+        font-size: 1.1rem;
+        transition: 0.8s ease;
+    }
+
+
+    .footerContacts{
+        width: 100vw;
+
+    }
+
+    .footerContacts ul{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+       
+        position: relative;
+        left: -7px;
+    }
+
+    .rows{
+        
+        display: flex;
+        justify-content: center;
+    }
+
+    
+
+    .footerContacts ul li{
+       
+        height: 40px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        margin: 5px;
+    }
+
+    .footerContacts ul li a{
+        width: 40px;
+        font-size: 0.5rem;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+    }
+
+    .footerContacts ul li a:hover{
+        font-size: 0.6rem;
+        transition: 0.8s ease;
+        
+    }
+
+   
+/*
+    .footer{
+        border: 2px solid orange; 
+    }
+
+    .subscribeNewsletter{
+        border: 2px solid blue;
+        text-align: center;
+        font-Size: 0.5rem;
+    }
+
+    .footercContacts{
+        border: 2px solid red;
+    }
+
+    .footercContacts ul{
+        border: 2px solid black;
+    }
+
+    .row{
+        border: 2px solid pink;
+    }
+
+    .row li{
+        border: 2px solid purple;
+    }*/
 }
 
     
