@@ -1,0 +1,36 @@
+
+
+.necklaces{
+    background-image: url("shoppingImages/necklace11.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.ring{
+    background-image: url("shoppingImages/homeRing.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.homeDecor{
+    background-image: url("shoppingImages/homeDecor.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px 0;
+}
+
+.bracelet{
+    background-image: url("shoppingImages/bracelet01.jpg");
+    background-size: cover;
+    background-position: 0 -400px ;
+    background-repeat: no-repeat;
+}
+
+.handbag{
+    background-image: url("shoppingImages/homeHandbag.jpg");
+    background-size: cover;
+    background-position: 0px -470px;
+    background-repeat: no-repeat;
+}
+
+

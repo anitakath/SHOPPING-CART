@@ -1,0 +1,122 @@
+
+.itemContainer{
+    width: 100vw;
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(4, 1fr);
+    
+}
+
+.goUpContainer{
+    width: 50px;
+    position: fixed;
+    z-index: 1000;
+    top: 133px;
+    left: 12px;
+    font-size: 1.8rem;
+    display: flex;
+    border: 2px solid blue;
+   
+}
+
+#goUp:hover{
+    text-shadow: 1px 1px 10px purple;
+}
+
+
+
+.item{   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: clamp(300px, 30vw, 300px);
+    height: 500px;
+    position: relative;
+    left: 30px;
+    margin-top: 10px;
+
+}
+
+.item img:hover{
+    box-shadow: 0px 0px 10px silver;
+    
+ 
+}
+
+.item div{
+    width: 250px;
+    display: flex;
+    justify-content: center;
+  
+}
+
+.itemImage{
+    border: none;
+}
+
+.itemImage{
+   width: 150px;
+   height: 400px;
+}
+
+.itemImage:hover{
+    cursor: pointer;
+} 
+
+
+
+
+.addToWishlist{
+    margin: 5px;
+    padding: 5px;
+
+}
+
+.addToWishlist:hover, .addToCart:hover{
+    color: var( --elRojo);
+    transition: 0.3s linear;
+}
+
+
+
+.counter{
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 20px;
+    position: relative;
+    font-size: 20px;
+    
+    /*background-color: lightgreen;*/
+}
+
+.counter i{
+    margin: 2px 10px;
+   /* border: 1px solid blue;*/
+    cursor: pointer;
+}
+
+
+
+.itemTitle{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: baseline;
+    width: 100%;
+}
+
+.itemTitleDesc{
+    font-size: 0.9rem;
+    width: 200px;
+}
+
+
+.itemTitle p{
+    margin: 2px 2px;
+    letter-spacing: 1px;
+    
+}
+
+
