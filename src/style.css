@@ -175,7 +175,6 @@ nav{
     background-color: transparent;
     border-top: 0.5px solid black;
     border-bottom: 0.5px solid black;
-    
     width: 200px;
     border-left: none;
     border-right: none;
@@ -245,6 +244,7 @@ nav{
     flex-direction: column;
     position: relative;
     top: -80px;
+    
   
 }
 
@@ -259,6 +259,7 @@ nav{
     align-items: center;
     margin: 10px;
     overflow: hidden;
+    box-shadow: 0px 0px 5px silver;
    
 }
 
@@ -347,23 +348,6 @@ nav{
 }
 
 
-@media (max-width: 1200px){
-
-    .shop{
-        transition: 1s ease;
-        left: 160px;
-    
-    }
-}
-
-@media (max-width: 1000px){
-
-    .shop{
-        transition: 1s ease;
-        left: 200px;
-    
-    }
-}
 
 .mobileMain{
     display: none;
@@ -480,6 +464,7 @@ transition: 0.8s ease;
     .headerLeftContainer{
         flex-direction: column;
     }
+   
 
   
 
@@ -489,6 +474,26 @@ transition: 0.8s ease;
 
 
 
+@media (max-width: 1200px){
+
+    .shop{
+        transition: 1s ease;
+        left: 160px;
+    }
+   
+}
+
+@media (max-width: 1000px){
+    
+        
+    
+
+    .shop{
+        transition: 1s ease;
+        left: 200px;
+    
+    }
+}
 
 @media (max-width: 850px){
 
@@ -496,6 +501,7 @@ transition: 0.8s ease;
 
     .header{
         flex-direction: column;
+        
     }
 
     .headerLeftContainer, .headerRightContainer{
@@ -532,11 +538,11 @@ transition: 0.8s ease;
         position: relative;
     }
    
-   .webNav{
-       transform: translateY(-800px);
-       z-index: 1000;
-   }
-
+    .webNav{
+        transform: translateY(-800px);
+        z-index: 1000;
+    }
+ 
    .navLinkContainer{
        width: 100vw;
        height: 45px;

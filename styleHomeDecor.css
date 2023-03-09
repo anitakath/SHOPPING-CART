@@ -1,10 +1,13 @@
+main{
+    height: 65vh;
+}
+
 .decorContainer, .carpetContainer, .lampsContainer{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     width: 100vw;
-    display: grid;
     position: relative;
-
+    
 }
 
 
@@ -13,11 +16,13 @@
 
 .decorItem{
     margin: 20px;
-    height: 18rem;
+    height: 25rem;
     background-size: cover;
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    box-shadow: 0px 0px 5px silver;
+    
 }
 
 .itemTitleContainer{
@@ -52,6 +57,40 @@
     background-image: url("shoppingImages/bedroom.jpg");
 }
 
+
+
+
+@media (max-width: 1000px){
+    .decorContainer{
+        grid-template-columns: repeat(3, 1fr);
+        transition: 0.5s ease;
+    }
+}
+
+@media (max-width: 850px){
+
+    main{
+        position: relative;
+        top: -50px;
+    }
+
+    .decorContainer{
+        grid-template-columns: repeat(2, 1fr);
+        transition: 0.5s ease;
+    }
+
+
+
+}
+
+
+@media (max-width: 400px){
+
+    .decorContainer{
+        grid-template-columns: repeat(1, 1fr);
+        transition: 0.5s ease;
+    }
+}
 
 
 
