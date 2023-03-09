@@ -278,3 +278,18 @@ const decrementNecklace = document.getElementById('')
 
 /* WHY OCCURS AN ERROR WHEN USING INCREMENT() AND DECREMENT() WHEN ONCLICK="INCREMENT(${X.ID}" ON HTML I-TAG WITHIN CREATESHOP() ??? 
 SAYING VARIABLE RING/NECKLACE, BRACELET IS NOT DEFINED AT INDEX??? */
+
+
+
+
+
+/*
+const mobileNav = document.getElementById('webNav')
+const mobileMain = document.getElementById('mobileMain')
+
+mobileMenuContainer.addEventListener('click', ()=>{
+    mobileNav.style.transform = 'translateY(10px)'
+    mobileNav.style.transition = '1s ease-in'
+    mobileMain.style.opacity = '0.3'
+    mobileMain.style.transition = '1s ease-in'
+})*/
