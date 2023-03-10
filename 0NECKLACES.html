@@ -38,13 +38,53 @@
                         <i class="bi bi-bag-fill" class="basketIcon" id="basketIcon"> 0 </i>
                     </div>
                 </a>
-                
-               
      
+        </div>
+        
+        <div class="mobileMenuContainer" id="mobileMenuNecklaces">
+
+            <div class="mobileMenu"> 
+                <i class="bi bi-list"></i>
+            </div>
+            
         </div>
 
     </header>
 
+
+    <nav class="webNav" id="webNav">
+        <ul class="navigationContainer">
+           
+            <div class="navLinkContainer">
+                <li class="navigationItem">
+                    <a href="0NECKLACES.html"> NECKLACES </a>
+                </li>
+            </div>
+            <div class="navLinkContainer">
+                <li class="navigationItem">
+                    <a href="0RINGS.html"> RINGS </a>
+                </li>
+            </div>
+            <div class="navLinkContainer">
+                <li class="navigationItem">
+                    <a href="0BRACELETS.html"> BRACELETS </a>
+                </li>
+            </div>
+            <div class="navLinkContainer">
+                <li class="navigationItem">
+                    <a href="0HANDBAGS.html"> HANDBAGS </a>
+                </li>
+            </div>
+            <div class="navLinkContainer mobileNavLogin">
+                <li class="navigationItem">
+                    <a href="0HANDBAGS.html" style="color: red"> LOGIN / SIGN UP </a>
+                </li>
+            </div>
+           
+        </ul>
+    </nav>
+
+    
     <main>
 
         <div class="itemContainer" id="itemContainer"> 
@@ -57,17 +97,32 @@
 
     
 
-    <footer>
-        <h1> made with ❤️ </h1>
-    </footer>
+
    
 
-    <script src="data.js"></script> // data vor main, da das Array vor den Funktionen vorhanden sein muss!
+    <script src="data.js"></script> <!-- data vor main, da das Array vor den Funktionen vorhanden sein muss! -->
     <script src="src/main.js"></script>
+    <script src="src/start.js"></script>
     
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
+    </script>
+
+    <script>
+
+        const mobileMenuNecklaces = document.getElementById('mobileMenuNecklaces')
+        const mobileNav = document.getElementById('webNav')
+        const mobileMain = document.getElementById('mobileMain')
+        
+        mobileMenuNecklaces.addEventListener('click', ()=>{
+            mobileNav.style.transform = 'translateY(10px)'
+            mobileNav.style.transition = '1s ease-in'
+            mobileMain.style.opacity = '0.3'
+            mobileMain.style.transition = '1s ease-in'
+            
+        })
+
     </script>
 
 

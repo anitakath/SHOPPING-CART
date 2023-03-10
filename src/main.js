@@ -38,7 +38,7 @@ let createShop = () =>{
         <div id="productId${id}" class="item" data-aos="fade-up">
 
 
-           <div class="itemImage">
+           <div class="itemImage" id="mobileMain">
               <img src="${img}" alt="" style="width: 250px">
             </div>
 

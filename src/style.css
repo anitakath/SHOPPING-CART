@@ -377,18 +377,12 @@ nav{
 
 /* ------------------------------- FOOTER -------------------------------*/
 
-.something{
-    width: 100vw;
-    height: 20vh;
-    background-color: red;
-}
 
 footer{
     width: 100vw;
     position: relative;
     top: -65px;
     border-top: 0.5px solid silver;
-    border: 20px solid gold;
 }
 
 .footer{

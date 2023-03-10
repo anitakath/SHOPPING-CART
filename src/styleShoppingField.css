@@ -5,6 +5,7 @@
     position: relative;
     grid-template-columns: repeat(4, 1fr);
     
+   
 }
 
 .goUpContainer{
@@ -35,7 +36,6 @@
     position: relative;
     left: 30px;
     margin-top: 10px;
-
 }
 
 .item img:hover{
@@ -120,3 +120,50 @@
 }
 
 
+
+
+@media(max-width: 1200px){
+    .itemContainer{
+        grid-template-columns: repeat(3, 1fr);
+        
+    }
+
+}
+
+@media (max-width: 950px){
+
+    .itemContainer{
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+}
+
+@media (max-width: 700px){
+
+    .itemContainer{
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+
+    .item{
+        position: relative;
+        left: 25%;
+        transform: translate(-50%, -50%);
+  
+    }
+}
+
+@media (max-width: 500px){
+    
+   
+
+    .item{
+        left: 15%;
+    }
+}
+
+@media (max-width: 400px){
+    .item{
+        left: 10%;
+    }
+}
