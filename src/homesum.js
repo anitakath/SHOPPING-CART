@@ -87,12 +87,12 @@ const main = document.querySelector('main')
 mobileMenuHomeSum.addEventListener('click', ()=>{
     if(mobileNav.style.transform === 'translateY(14vh)'){
         mobileNav.style.transform = 'translateY(-800px)'
-        mobileNav.style.transition = '1s ease-in'
+        mobileNav.style.transition = '1s ease-in-out'
         main.style.opacity = '1'
         main.style.transition = '1s ease-in'
     } else{
         mobileNav.style.transform = 'translateY(14vh)'
-        mobileNav.style.transition = '1s ease-in'
+        mobileNav.style.transition = '1s ease-in-out'
         main.style.opacity = '0.3'
         main.style.transition = '1s ease-in'
        
