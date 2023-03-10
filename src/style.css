@@ -537,16 +537,19 @@ transition: 0.8s ease;
         justify-content: center;
         align-items: center;
         position: relative;
+        
     }
    
     .webNav{
         transform: translateY(-800px);
         z-index: 1000;
+        position: fixed;
     }
  
    .navLinkContainer{
        width: 100vw;
        height: 45px;
+      
    }
 
 

@@ -83,7 +83,7 @@ const mobileNav = document.getElementById('webNav')
 const mobileMain = document.getElementById('mobileMain')
 
 mobileMenuHomeSum.addEventListener('click', ()=>{
-    mobileNav.style.transform = 'translateY(10px)'
+    mobileNav.style.transform = 'translateY(-100px)'
     mobileNav.style.transition = '1s ease-in'
     mobileMain.style.opacity = '0.3'
     mobileMain.style.transition = '1s ease-in'
