@@ -542,12 +542,12 @@ transition: 0.8s ease;
         transform: translateY(-800px);
         z-index: 1000;
         position: fixed;
+        
     }
  
    .navLinkContainer{
        width: 100vw;
-       height: 45px;
-      
+       height: 45px;  
    }
 
 

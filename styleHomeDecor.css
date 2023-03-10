@@ -22,7 +22,7 @@ main{
     overflow: hidden;
     cursor: pointer;
     box-shadow: 0px 0px 5px silver;
-    border: 2px solid green;
+  
 }
 
 .itemTitleContainer{
@@ -71,7 +71,7 @@ main{
 
     main{
         position: relative;
-        top: -50px;
+       
     }
 
     .decorContainer{

@@ -81,17 +81,24 @@ const decorContainer = document.querySelector('.decorContainer')
 const mobileMenuHomeSum= document.getElementById('mobileMenuHomeSum')
 const mobileNav = document.getElementById('webNav')
 const mobileMain = document.querySelectorAll('.mobileMain')
+const main = document.querySelector('main')
+
 
 mobileMenuHomeSum.addEventListener('click', ()=>{
-    mobileNav.style.transform = 'translateY(-100px)'
-    mobileNav.style.transition = '1s ease-in'
-    decorItem.style.opacity = '0.3'
-    decorItem.style.transition = '1s ease-in'
-    decorItem.style.border = '10px solid red'
+    if(mobileNav.style.transform === 'translateY(-100px)'){
+        mobileNav.style.transform = 'translateY(-800px)'
+        mobileNav.style.transition = '1s ease-in'
+        main.style.opacity = '1'
+        main.style.transition = '1s ease-in'
+    } else{
+        mobileNav.style.transform = 'translateY(-100px)'
+        mobileNav.style.transition = '1s ease-in'
+        main.style.opacity = '0.3'
+        main.style.transition = '1s ease-in'
+       
+    }
+   
 })
 
-console.log(mobileMain)
 
 
-
-console.log(decorItem)

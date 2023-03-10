@@ -57,7 +57,7 @@
            
             <div class="navLinkContainer">
                 <li class="navigationItem">
-                    <a href="0NECKLACES.html"> NECKLACES </a>
+                    <a href="0HOMESUM.html"> HOME DECOR </a>
                 </li>
             </div>
             <div class="navLinkContainer">
@@ -114,18 +114,19 @@
         const mobileMenuNecklaces = document.getElementById('mobileMenuNecklaces')
         const mobileNav = document.getElementById('webNav')
         const mobileMain = document.getElementById('mobileMain')
+        const main = document.querySelector('main')
         
         mobileMenuNecklaces.addEventListener('click', ()=>{
             if(mobileNav.style.transform === 'translateY(10px)'){
                 mobileNav.style.transform = 'translateY(-800px)'
                 mobileNav.style.transition = '1s ease-in'
-                mobileMain.style.opacity = '0.3'
-                mobileMain.style.transition = '1s ease-in'
+                main.style.opacity = '1'
+                main.style.transition = '1s ease-in'
             } else{
                 mobileNav.style.transform = 'translateY(10px)'
                 mobileNav.style.transition = '1s ease-in'
-                mobileMain.style.opacity = '0.3'
-                mobileMain.style.transition = '1s ease-in'
+                main.style.opacity = '0.3'
+                main.style.transition = '1s ease-in'
             } 
             
         })
