@@ -1,13 +1,18 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Poiret+One&family=Bad+Script&family=Raleway:wght@200&family=Solitreo&display=swap');
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    
 }
 
 :root{
     --lightmaroon: hsl(0, 100%, 99%);
     --elRojo: rgb(218, 41, 28);
     --sliderBackground:hsla(0, 100%, 25%, 0.25);
+    --anotherSliderBackground:  hsla(174, 72%, 46%, 0.2)
 }
 
 
@@ -109,6 +114,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Poiret One', cursive;
     
 }
 
@@ -242,10 +248,8 @@ nav{
     align-items: center;
     flex-direction: column;
     position: relative;
-    top: -80px;
-   
-    
-  
+    top: -50px;
+ 
 }
 
 
@@ -260,11 +264,11 @@ nav{
     margin: 10px;
     overflow: hidden;
     box-shadow: 0px 0px 5px silver;
-   
 }
 
+
 .slides{
-    /*border: 2px solid orange;*/
+
     width: 100%;
     height: 100%;
     color: white;
@@ -276,7 +280,7 @@ nav{
 
 
 .leftSlides, .rightSlides{
-    width: clamp(400px, 60vw, 629px);
+    width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -284,6 +288,7 @@ nav{
     font-size: 1rem;
     transition: transform 0.5s ease-in-out;
     position: relative;
+    
 }
 
 
@@ -326,21 +331,31 @@ nav{
 
 
 .shop{
-    width: clamp(200px, 30vw, 400px);
+    width: 100%;
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin: 20px;
     position: absolute;
-   
- 
+    color: mintcream;
+    font-family: 'Poiret One', cursive;
 }
-.links{
-    font-size: clamp(16px, 2vw, 20px);
-    height: 150px;
-    display: flex;
-    justify-content: center;
+
+.shop span{
+    font-size: clamp(2rem, 3rem, 5rem);
+    margin: 30px;
     
 }
+
+.shop span:hover{
+    letter-spacing: 5px;
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+    color: hsl(0, 0%, 40%);
+    
+
+}
+
 
 .links:hover{
     letter-spacing: 5px;
@@ -473,26 +488,7 @@ transition: 0.8s ease;
 
 
 
-@media (max-width: 1200px){
 
-    .shop{
-        transition: 1s ease;
-        left: 160px;
-    }
-   
-}
-
-@media (max-width: 1000px){
-    
-        
-    
-
-    .shop{
-        transition: 1s ease;
-        left: 200px;
-    
-    }
-}
 
 @media (max-width: 850px){
 
@@ -542,7 +538,7 @@ transition: 0.8s ease;
         transform: translateY(-800px);
         z-index: 1000;
         position: fixed;
-        
+        top: 100px;
     }
  
    .navLinkContainer{

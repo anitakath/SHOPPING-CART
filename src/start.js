@@ -5,6 +5,7 @@
 let myBasket = JSON.parse(localStorage.getItem("data")) || [] 
 
 
+
 let calculation = () =>{
     let basketIcon = document.getElementById('basketIcon')
     basketIcon.innerHTML=myBasket.map((x) => x.item).reduce((x, y) => x + y, 0);
@@ -27,8 +28,9 @@ const upBtn = document.getElementById('upBtn')
 const downBtn = document.getElementById('downBtn')
 
 const slidesLength = rightSlides.querySelectorAll('div').length
+console.log(slidesLength)
 const slidesHeight = sliderContainer.clientHeight
-
+console.log(slidesHeight)
 
 let activeSlideIndex = 0;
 
@@ -48,7 +50,7 @@ let changeSlides = (direction) =>{
         }
     } else if(direction === 'down'){
         activeSlideIndex--
-        if(activeSlideIndex < 0){
+        if(activeSlideIndex < 0){ 
             activeSlideIndex = slidesLength -1
         }
     }
@@ -62,7 +64,7 @@ let changeSlides = (direction) =>{
 
 
 
-/* GET MOBILE VERSION */
+/* GET MOBILE NAV BAR */
 
 const mobileMenuContainer = document.getElementById('mobileMenuContainer')
 const mobileNav = document.getElementById('webNav')
@@ -70,13 +72,13 @@ const mobileMain = document.getElementById('mobileMain')
 
 
 mobileMenuContainer.addEventListener('click', ()=>{
-    if(mobileNav.style.transform === 'translateY(-150px)'){
+    if(mobileNav.style.transform === 'translateY(14vh)'){
         mobileNav.style.transform = 'translateY(-800px)'
         mobileNav.style.transition = '1s ease-in'
         mobileMain.style.opacity = '0.3'
         mobileMain.style.transition = '1s ease-in'
     } else{
-        mobileNav.style.transform = 'translateY(-150px)'
+        mobileNav.style.transform = 'translateY(14vh)'
         mobileNav.style.transition = '1s ease-in'
         mobileMain.style.opacity = '0.3'
         mobileMain.style.transition = '1s ease-in'
