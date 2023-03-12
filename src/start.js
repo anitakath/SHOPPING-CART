@@ -1,7 +1,7 @@
 
 // --------------------------------------------------------------------------------------------- SHOPPING CART
 
-
+/*
 let myBasket = JSON.parse(localStorage.getItem("data")) || [] 
 
 
@@ -14,6 +14,7 @@ let calculation = () =>{
 
 calculation();
 // 02:04 youtube
+*/
 
 
 
@@ -28,9 +29,8 @@ const upBtn = document.getElementById('upBtn')
 const downBtn = document.getElementById('downBtn')
 
 const slidesLength = rightSlides.querySelectorAll('div').length
-console.log(slidesLength)
+
 const slidesHeight = sliderContainer.clientHeight
-console.log(slidesHeight)
 
 let activeSlideIndex = 0;
 
@@ -41,7 +41,6 @@ upBtn.addEventListener('click', ()=> changeSlides('up'))
 downBtn.addEventListener('click', ()=> changeSlides('down'))
 
 let changeSlides = (direction) =>{
-    console.log(slidesHeight)
     if(direction === 'up'){
         activeSlideIndex++
         console.log(activeSlideIndex)
@@ -95,9 +94,9 @@ const mobileSlides = document.querySelectorAll('.mobileSlides')
 
 
 const sliderHeight = mobileMainSlider.offsetHeight;
-console.log(sliderHeight)
+
 const slidesHeightt = mobileMainSlider.clientHeight;
-console.log(slidesHeightt)
+
 
 
 
@@ -148,4 +147,40 @@ setInterval(function(){
 /*
 mobileMainSlider.addEventListener('click', ()=>{
     alert('moincito')
+})
+
+
+const mobileMenuNecklaces = document.getElementById('mobileMenuNecklaces')
+const mobileNavv = document.getElementById('webNav')
+const mobileMainv = document.getElementById('mobileMain')
+const main = document.querySelector('main')
+
+mobileMenuNecklaces.addEventListener('click', ()=>{
+    if(mobileNavv.style.transform === 'translateY(14vh)'){
+        mobileNavv.style.transform = 'translateY(-800px)'
+        mobileNavv.style.transition = '1s ease-in'
+        main.style.opacity = '1'
+        main.style.transition = '1s ease-in'
+    } else{
+        mobileNavv.style.transform = 'translateY(14vh)'
+        mobileNavv.style.transition = '1s ease-in'
+        main.style.opacity = '0.3'
+        main.style.transition = '1s ease-in'
+    } 
+    
+})
+
+
+const goUpContainer = document.getElementById('goUpContainer')
+
+
+goUpContainer.addEventListener('click', ()=>{
+   window.scrollTo({
+        top: 100,
+        left: 100,
+        behavior: 'smooth'
+    });
+
+    console.log(goUpContainer)
 })*/
+

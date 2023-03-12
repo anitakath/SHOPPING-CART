@@ -81,15 +81,20 @@
             </div>
             <div class="navLinkContainer mobileNavLogin">
                 <li class="navigationItem">
-                    <a href="0HANDBAGS.html" style="color: red"> LOGIN / SIGN UP </a>
+                    <a href="0HANDBAGS.html" class="mobileLoginColor"> LOGIN / SIGN UP </a>
                 </li>
             </div>
            
         </ul>
     </nav>
 
+   
     
     <main>
+
+        <div class="goUpContainer" id="goUpContainer" style="border: 2px solid red">
+            <i class="bi bi-chevron-double-up"></i>
+        </div>
 
         <div class="itemContainer" id="itemContainer"> 
 
@@ -105,7 +110,7 @@
    
 
     <script src="data.js"></script> <!-- data vor main, da das Array vor den Funktionen vorhanden sein muss! -->
-    <script src="src/main.js"></script>
+    <script src="src/createShop.js"></script>
     <script src="src/start.js"></script>
     
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -114,28 +119,28 @@
     </script>
 
     <script>
-
         const mobileMenuNecklaces = document.getElementById('mobileMenuNecklaces')
-        const mobileNav = document.getElementById('webNav')
-        const mobileMain = document.getElementById('mobileMain')
+        const mobileNavv = document.getElementById('webNav')
+        const mobileMainv = document.getElementById('mobileMain')
         const main = document.querySelector('main')
-        
+
         mobileMenuNecklaces.addEventListener('click', ()=>{
-            if(mobileNav.style.transform === 'translateY(14vh)'){
-                mobileNav.style.transform = 'translateY(-800px)'
-                mobileNav.style.transition = '1s ease-in'
+            if(mobileNavv.style.transform === 'translateY(14vh)'){
+                mobileNavv.style.transform = 'translateY(-800px)'
+                mobileNavv.style.transition = '1s ease-in'
                 main.style.opacity = '1'
                 main.style.transition = '1s ease-in'
             } else{
-                mobileNav.style.transform = 'translateY(14vh)'
-                mobileNav.style.transition = '1s ease-in'
+                mobileNavv.style.transform = 'translateY(14vh)'
+                mobileNavv.style.transition = '1s ease-in'
                 main.style.opacity = '0.3'
                 main.style.transition = '1s ease-in'
             } 
             
         })
-
     </script>
+
+    
 
 
 

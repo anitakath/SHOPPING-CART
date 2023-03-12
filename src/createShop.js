@@ -48,23 +48,20 @@ let createShop = () =>{
             </div>
 
             <div class="addSection">
+
               <div class="addToWishlist"> 
                 <i onclick="addToWishlist(${id})" class="bi bi-balloon-heart"></i>
               </div>
 
 
-              <div class="counter" >
+              <div class="counter">
                 <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
                 <p class="quantity" id=${id}> 
                 ${search.item === undefined? 0: search.item} </p>
                 <i onclick="increment(${id})" class="bi bi-plus-lg"></i>
               </div>
-            </div>
-            
 
             </div>
-
-           
 
         </div> `
     })
@@ -225,6 +222,7 @@ let styleTheContainersChildren = ()=>{
 
 styleTheContainersChildren();
 */
+/*
 
 const itemImage = document.querySelectorAll('.itemImage')
 
@@ -265,7 +263,7 @@ let enlargeContainersChildren =()=>{
 }
 
 enlargeContainersChildren();
-
+*/
 
 /*
 const decrementRing = document.getElementById('decrementring')
