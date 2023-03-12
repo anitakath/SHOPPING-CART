@@ -19,9 +19,17 @@
         <div class="header" data-aos="fade-down">
 
             <div class="headerLeftContainer">
-                <div class="titleContainer">
+                <div class="titleContainer" style="position: relative">
+
                     <h1 class="title mainTitle"> SHOPNAME TITLE </h1>
+
+                    <div class="goUpContainer" id="goUpContainer">
+                        <i class="bi bi-chevron-double-up"></i>
+                    </div>
+                    
                 </div>
+                
+        
     
     
                 <div class="titleContainer">
@@ -110,11 +118,12 @@
             </div>
             <div class="navLinkContainer mobileNavLogin">
                 <li class="navigationItem">
-                    <a href="0HANDBAGS.html" style="color: red"> LOGIN / SIGN UP </a>
+                    <a href="0HANDBAGS.html" class="mobileLoginColor"> LOGIN / SIGN UP </a>
                 </li>
             </div>
            
         </ul>
+        
     </nav>
    
 
@@ -128,6 +137,8 @@
 <!-- --------------------------- WEB CONTENT ---------------------------------->
 
     <main data-aos="fade-up" class="webMain" >
+
+        
 
         <div class="sliderContainer" id="sliderContainer">
             <div class="slides" id="leftSlides">
@@ -237,10 +248,7 @@
                     <li> <a href="#"> & CO</a></li>
             
                    </div>
-   
-                
 
-            
                    
                    
                </ul>
@@ -253,6 +261,19 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
+    </script>
+    <script>
+            const goUpContainer = document.getElementById('goUpContainer')
+
+            goUpContainer.addEventListener('click', ()=>{
+            window.scrollTo({
+                    top: 0,
+                    
+                    behavior: 'smooth'
+                });
+
+            console.log(goUpContainer)
+            })
     </script>
 
 </body>
