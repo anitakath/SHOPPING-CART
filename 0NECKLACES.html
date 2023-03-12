@@ -139,6 +139,21 @@
             } 
             
         })
+
+       
+        const goUpContainer = document.getElementById('goUpContainer')
+
+            goUpContainer.addEventListener('click', ()=>{
+                window.scrollTo({
+                        top: 0,
+                        
+                        behavior: 'smooth'
+                    });
+
+                console.log(goUpContainer)
+            })
+                
+    
     </script>
 
     

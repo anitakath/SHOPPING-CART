@@ -12,7 +12,7 @@ const decorContainer = document.getElementById('decorContainer')
 let myBasket = JSON.parse(localStorage.getItem("data")) || [];
 
 
-let createShop = () =>{
+let createVases = () =>{
     return (decorContainer.innerHTML = vasesData
         .map((x) => {
         /*let {id, name, price, desc, img} = x; ohne diese deklaration müssten wir ${x.img} usw schreiben...*/
@@ -53,16 +53,14 @@ let createShop = () =>{
             </div>
             
 
-            </div>
-
-           
+            </div>        
 
         </div> `
     })
     .join(" "));
 }
 
-createShop(); 
+createVases(); 
 
 
 let createCarpets = () =>{
@@ -165,6 +163,8 @@ let createLamps = () =>{
 }
 
 createLamps();
+
+
 
 
 

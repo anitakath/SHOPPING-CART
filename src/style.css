@@ -76,6 +76,7 @@ header{
 .title{
     width: 20rem;
     position: relative;
+   
 }
 
 .goUpContainer{
@@ -87,6 +88,7 @@ header{
     align-items: center;
     z-index: 1000;
 }
+
 
 .goUpContainer:hover{
     color: silver;
@@ -167,7 +169,7 @@ header{
 
 
 
-
+/* ------------------------------------------ NAVIGATION MENU --------------------------------------------------- */
 
 
 
@@ -186,9 +188,13 @@ nav{
     flex-wrap: wrap;
     justify-content: center;
     position: fixed;
+    top: 22.3vh;
     z-index: 1000;
     width: 100vw;
-    height: 10vh;
+    height: 8vh;
+    background-color: hsla(0, 0%, 100%,0.5);
+   
+   
 }
 
 .navLinkContainer{
@@ -215,12 +221,18 @@ nav{
     margin: 5px 2rem;
     scroll-behavior: smooth;
     letter-spacing: 5px; 
+    
 }
 
 .navigationItem a:hover{
     letter-spacing: 6px;
     cursor: pointer;
     transition: 0.3s ease;
+}
+
+.aContainer{
+    
+    width: 200px;
 }
 
 
