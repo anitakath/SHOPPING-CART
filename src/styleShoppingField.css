@@ -2,21 +2,6 @@
 main{
     position: relative;
 }
-.goUpContainer{
-    width: 50px;
-    position: fixed;
-    z-index: 1000;
-    top: 34vh;
-    transform: translateX(50vw);
-    font-size: 1.8rem;
-    display: flex;
-  
-   
-}
-
-#goUp:hover{
-    text-shadow: 1px 1px 10px purple;
-}
 
 
 
@@ -57,11 +42,11 @@ main{
 }
 
 .itemTitle, .addSection{
-    
     display: flex;
     width: 350px;
     justify-content: center;
     padding: 5px;
+    letter-spacing: 1px;
 }
 
 .itemTitle h3{
