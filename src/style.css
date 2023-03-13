@@ -1,4 +1,32 @@
 
+
+/* ------ A. HOMEPAGE MAINPAGE ------ */
+
+
+/* --- 1. WEB HEADER STYLES --- */
+/* --- 2. MOBILE HEADER STYLES --- */
+/* --- 3. WEB MAIN STYLES --- */
+/* --- 4. MOBILE MAIN STYLES --- */
+/* --- 5. WEB FOOTER STYLES --- */
+/* --- 6. MOBILE FOOTER STYLES --- */
+
+
+
+
+/* ------ B. SHOPPINGAREA ------ */
+
+
+/* --- 1. WEB MAIN STYLES --- */
+/* --- 2. HEADER STYLES --- */
+/* --- 3. HEADER STYLES --- */
+/* --- 4. HEADER STYLES --- */
+
+
+
+
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Poiret+One&family=Bad+Script&family=Raleway:wght@200&family=Solitreo&display=swap');
 
 *{
@@ -422,12 +450,21 @@ footer{
     font-size: 1rem;
     cursor: pointer;
     position: relative;
+    width: 500px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
 }
 
 
 .subscribeNewsletter h1:hover{
     letter-spacing: 2px;
     transition: 0.8s ease;
+}
+
+.subscribeNewsletter a{
+    margin: 0 5px;
 }
 
 
