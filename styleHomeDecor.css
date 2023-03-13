@@ -73,6 +73,12 @@ main{
     cursor: pointer;
 } 
 
+.quantity{
+    margin: 0 15px;
+   
+}
+
+
 /* -----------------------------------------  DOPPELT IN STYLESHOPPINGFIELD ?!?!?! > -----------------------------------------------------*/
 
 
@@ -138,6 +144,8 @@ main{
 .bedroom{
     background-image: url("shoppingImages/bedroom.jpg");
 }
+
+
 
 
 /* ---------------------------------------------- HOMESUM > ----------------------------------------------*/

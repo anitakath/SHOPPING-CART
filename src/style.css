@@ -15,6 +15,9 @@
     --anotherSliderBackground:  hsla(174, 72%, 46%, 0.2)
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 a{
     text-decoration: none;
@@ -220,7 +223,8 @@ nav{
     display: inline-block;
     margin: 5px 2rem;
     scroll-behavior: smooth;
-    letter-spacing: 5px; 
+    letter-spacing: 2px;
+    text-align: center;
     
 }
 
