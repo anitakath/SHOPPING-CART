@@ -4,6 +4,7 @@ console.log('CART.JS')
 
 let myBasket = JSON.parse(localStorage.getItem("data")) || [] 
 
+console.log(myBasket)
 
 let calculation = () =>{
     let basketIcon = document.getElementById('basketIcon')
