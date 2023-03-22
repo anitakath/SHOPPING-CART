@@ -50,16 +50,19 @@ const mobileMain = document.getElementById('mobileMain')
 
 
 mobileMenuContainer.addEventListener('click', ()=>{
-    if(mobileNav.style.transform === 'translateY(17vh)'){
+    if(mobileNav.style.transform === 'translateY(-40px)'){
         mobileNav.style.transform = 'translateY(-800px)'
         mobileNav.style.transition = '1s ease-in'
         mobileMain.style.opacity = '0.3'
         mobileMain.style.transition = '1s ease-in'
+        mobileNav.style.fontSize = '2rem'
     } else{
-        mobileNav.style.transform = 'translateY(17vh)'
+        mobileNav.style.transform = 'translateY(-40px)'
         mobileNav.style.transition = '1s ease-in'
         mobileMain.style.opacity = '0.3'
         mobileMain.style.transition = '1s ease-in'
+        mobileNav.style.fontSize = '1.5rem'
+
     }
     
 })
