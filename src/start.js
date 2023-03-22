@@ -125,6 +125,17 @@ setInterval(function(){
 
 
 
+let myBasket = JSON.parse(localStorage.getItem("data")) || [];
+
+
+let calculation = () =>{
+    let basketIcon = document.getElementById('basketIcon')
+    basketIcon.innerHTML=myBasket.map((x) => x.item).reduce((x, y) => x + y, 0);
+    // 0 : we want the calculation to start from zero
+}
+
+calculation();
+
 
 /*
 mobileMainSlider.addEventListener('click', ()=>{

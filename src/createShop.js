@@ -56,7 +56,7 @@ let createShop = () =>{
 
               <div class="counter">
                 <i onclick="decrement(${id})" class="bi bi-dash-lg forQuantity"></i>
-                <p class="quantity" id=${id}> 
+                <p class="quantity" id=${id} > 
                 ${search.item === undefined? 0: search.item} </p>
                 <i onclick="increment(${id})" class="bi bi-plus-lg forQuantity"></i>
               </div>

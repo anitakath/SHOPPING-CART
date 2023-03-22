@@ -27,52 +27,18 @@ const decorContainer = document.querySelector('.decorContainer')
        
     }
 
-        /*
-        const decorItem = document.querySelectorAll('.decorItem')
-        const itemTitleContainer = document.querySelectorAll('.itemTitleContainer')
+
+    
+let myBasket = JSON.parse(localStorage.getItem("data")) || [];
 
 
- /*
-        function displayTitle(){
-            for(let i = 0; i < itemTitleContainer.length; i++){
-                    itemTitleContainer[i].style.bottom = '200px'
-                    console.log(itemTitleContainer[i])
-                }
-        }
+let calculation = () =>{
+    let basketIcon = document.getElementById('basketIcon')
+    basketIcon.innerHTML=myBasket.map((x) => x.item).reduce((x, y) => x + y, 0);
+    // 0 : we want the calculation to start from zero
+}
 
-        displayTitle();
-        */
-
- /*
-
-        decorItem.forEach((item)=>{
-            item.addEventListener('click', ()=>{
-                item.style.border = '1px solid gold'
-            
-               /*
-                
-                for(let i = 0; i < itemTitleContainer.length; i++){
-                    itemTitleContainer[i].style.bottom = '200px'
-                    console.log(itemTitleContainer[i])
-                }*/
-/*
-                console.log(item)
-
-                
-                itemTitleContainer.forEach((x) =>{
-                    x.style.bottom = '4rem'
-                    x.style.transition = '1s ease'
-                    x.style.letterSpacing = '4px'
-                })
-                /*
-                console.log(item)
-                console.log(item.itemTitleContainer)
-                console.log(itemTitleContainer)*//*
-                
-            })
-        })
-
-*/
+calculation();
 
 
 

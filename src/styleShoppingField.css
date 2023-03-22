@@ -78,42 +78,46 @@ main{
 
 
 .quantity{
-    color: red;
+    color: black;
+    margin: 0px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
 }
 
 
-/*
+
 
 
 .addToWishlist{
     margin: 5px;
     padding: 5px;
-
-}
-
-.addToWishlist:hover, .addToCart:hover{
-    color: var( --elRojo);
-    transition: 0.3s linear;
-}
-
-
-
-.counter{
     display: flex;
     align-items: center;
-    width: 200px;
-    height: 20px;
-    position: relative;
-    font-size: 20px;
-    
-    /*background-color: lightgreen;*//*
+
 }
 
-.counter i{
-    margin: 2px 10px;
-   /* border: 1px solid blue;*//*
-    cursor: pointer;
+
+.addToWishlist i:hover{
+    color: red;
+    transition: 1s ease;
 }
+
+.forQuantity{
+    width:30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.forQuantity:hover{
+    font-size: 1.3rem;
+    transition: 1s ease;
+}
+
 
 
 
@@ -136,7 +140,7 @@ main{
     letter-spacing: 1px;
     
 }
-*/
+
 
 
 
