@@ -379,16 +379,20 @@ nav{
     font-family: 'Poiret One', cursive;
 }
 
-.shop span{
+.shop a{
     font-size: clamp(2rem, 3rem, 5rem);
-    margin: 30px;   
+    margin: 30px;
+    color: mintcream;  
+    display: flex;
+    justify-content: center;
 }
 
-.shop span:hover{
+.shop a:hover{
     letter-spacing: 5px;
     transition: 0.4s ease-in-out;
     cursor: pointer;
     color: hsl(0, 0%, 65%);
+    color: mintcream;
 }
 
 
