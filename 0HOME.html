@@ -139,14 +139,16 @@
         const main = document.querySelector('main')
 
         mobileMenuNecklaces.addEventListener('click', ()=>{
-            if(mobileNavv.style.transform === 'translateY(-100px)'){
+            if(mobileNavv.style.transform === 'translateY(-50px)'){
                 mobileNavv.style.transform = 'translateY(-800px)'
+                mobileNavv.style.fontSize = '1.5rem'
                 mobileNavv.style.transition = '1s ease-in'
                 main.style.opacity = '1'
                 main.style.transition = '1s ease-in'
             } else{
-                mobileNavv.style.transform = 'translateY(-100px)'
+                mobileNavv.style.transform = 'translateY(-50px)'
                 mobileNavv.style.transition = '1s ease-in'
+                mobileNavv.style.fontSize = '1.5rem'
                 main.style.opacity = '0.3'
                 main.style.transition = '1s ease-in'
             } 
